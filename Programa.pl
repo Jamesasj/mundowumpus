@@ -34,8 +34,8 @@ caminhar():-
 perguntar(Acao):-
     eh_wumpus(nao, L),
     eh_burado(nao, L),
-    autualizar_pos(L),
     permitido(L),
+    autualizar_pos(L),
     Acao = L.
 
 atualizar_conhecimento([Fedor, Brisa, Brilho]):-
@@ -122,8 +122,8 @@ validaPosicao(X,Y):-
 
 permitido([X,Y]):-
     dimensao([Dx,Dy]),
-    0<X,X>Dx+1,
-    0<Y,Y<Dy+1.
+    0 < X, X < Dx+1,
+    0 < Y, Y < Dy+1.
 
 /*      Atuadores       */
 
